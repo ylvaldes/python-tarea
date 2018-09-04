@@ -102,7 +102,7 @@ def leer_millardos(numero):
 
 def main():
     init()
-    inicio="Programa para convertir Letras a números"
+    inicio="Programa para convertir números a letras"
     print(Fore.RED+inicio.center(50,"*"))
     print(Style.RESET_ALL+"Escriba un número:")
     num=int(input())
