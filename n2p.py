@@ -99,17 +99,21 @@ def leer_millones(numero):
 def leer_millardos(numero):
     millardo, millon = divmod(numero, 1000000)
     return '{} millones {}'.format(leer_miles(millardo), leer_millones(millon))
+def test():
+    numeros=[0,-15,15,109.9,589,1587,13695,154789,5874695,95874563,999999999,128,1229]
+    for x in numeros:
+        print('{} \t---> \t {}'.format(x,numero_a_letras(x).capitalize()))
 
 def main():
     init()
     inicio="Programa para convertir números a letras"
     print(Fore.RED+inicio.center(50,"*"))
-    print(Style.RESET_ALL+"Escriba un número:")
-    num=int(input())
-    print('{} \t---> \t {}'.format(num,numero_a_letras(num).capitalize()))
-    numeros=[0,-15,15,109.9,589,1587,13695,154789,5874695,95874563,999999999,128,1229]
-    for x in numeros:
-        print('{} \t---> \t {}'.format(x,numero_a_letras(x).capitalize()))
-   
+    print(Style.RESET_ALL+" ")
+    aux='S'
+    while aux=='S' or aux=='s':
+        num=int(input("Escriba un número:"))
+        print('{} \t---> \t {}'.format(num,numero_a_letras(num).capitalize()))
+        print()
+        aux= input("Desea probar otro número S/N:")  
 
 if __name__=='__main__':main()
